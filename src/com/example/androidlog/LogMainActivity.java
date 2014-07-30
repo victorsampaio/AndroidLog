@@ -1,6 +1,6 @@
 package com.example.androidlog;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -8,16 +8,15 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class LogMainActivity extends ActionBarActivity {
+public class LogMainActivity extends Activity {
 	
-		private static final String CATEGORIA = "TestLog";
+	private static final String CATEGORIA = "TestLog";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_main);
-    
-                
+                    
     	//Verbose
 		Log.v(CATEGORIA, "Log to verbose");
 		TextView verbose = (TextView)findViewById(R.id.textViewVerbose);
